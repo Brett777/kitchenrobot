@@ -257,7 +257,7 @@ def _main():
 
     # Navigation
     page_names_to_funcs = {
-        "Welcome": introPage,
+        # "Welcome": introPage,
         "Kitchen Rating by URL": kitchenDetectorPage,
         # "Kitchen Rating Camera": kitchenCameraPage
 
