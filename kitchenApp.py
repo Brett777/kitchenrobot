@@ -117,28 +117,29 @@ def kitchenQuality(df):
 
 def kitchenDetectorPage():
     st.header("Kitchen Rating by URL")
+    st.write("Some Examples to try. Copy and paste one of these into the field below or use your own!")
     # Layout
     container0 = st.container()
     col1, col2, col3, col4, col5, col6 = container0.columns([1,1,1,1,1,1])
-    st.write("Some Examples:")
+
     with col1:
-        st.write("https://ssl.cdn-redfin.com/photo/248/bigphoto/702/C8160702_16_0.jpg")
+        st.caption("https://ssl.cdn-redfin.com/photo/248/bigphoto/702/C8160702_16_0.jpg")
         st.image("https://ssl.cdn-redfin.com/photo/248/bigphoto/702/C8160702_16_0.jpg", width=75)
     with col2:
-        st.write("https://ssl.cdn-redfin.com/photo/248/bigphoto/082/C8161082_0.jpg")
-        st.image("https://ssl.cdn-redfin.com/photo/248/bigphoto/082/C8161082_0.jpg", width=75)
+        st.caption("https://ssl.cdn-redfin.com/photo/248/bigphoto/082/C8161082_0.jpg")
+        st.image("https://ssl.cdn-redfin.com/photo/248/bigphoto/082/C8161082_0.jpg", width=150)
     with col3:
-        st.write("https://ssl.cdn-redfin.com/photo/248/bigphoto/508/C8160508_0.jpg")
-        st.image("https://ssl.cdn-redfin.com/photo/248/bigphoto/508/C8160508_0.jpg", width=75)
+        st.caption("https://ssl.cdn-redfin.com/photo/248/bigphoto/508/C8160508_0.jpg")
+        st.image("https://ssl.cdn-redfin.com/photo/248/bigphoto/508/C8160508_0.jpg", width=150)
     with col4:
-        st.write("https://ssl.cdn-redfin.com/photo/248/bigphoto/508/C8160508_11_0.jpg")
-        st.image("https://ssl.cdn-redfin.com/photo/248/bigphoto/508/C8160508_11_0.jpg", width=75)
+        st.caption("https://ssl.cdn-redfin.com/photo/248/bigphoto/508/C8160508_11_0.jpg")
+        st.image("https://ssl.cdn-redfin.com/photo/248/bigphoto/508/C8160508_11_0.jpg", width=150)
     with col5:
-        st.write("https://ssl.cdn-redfin.com/photo/248/bigphoto/508/C8160508_27_0.jpg")
-        st.image("https://ssl.cdn-redfin.com/photo/248/bigphoto/508/C8160508_27_0.jpg", width=75)
+        st.caption("https://ssl.cdn-redfin.com/photo/248/bigphoto/508/C8160508_27_0.jpg")
+        st.image("https://ssl.cdn-redfin.com/photo/248/bigphoto/508/C8160508_27_0.jpg", width=150)
     with col6:
-        st.write("https://ssl.cdn-redfin.com/photo/248/bigphoto/790/W8156790_15_1.jpg")
-        st.image("https://ssl.cdn-redfin.com/photo/248/bigphoto/790/W8156790_15_1.jpg", width=75)
+        st.caption("https://ssl.cdn-redfin.com/photo/248/bigphoto/790/W8156790_15_1.jpg")
+        st.image("https://ssl.cdn-redfin.com/photo/248/bigphoto/790/W8156790_15_1.jpg", width=150)
 
     container1 = st.container()
     with container1:
