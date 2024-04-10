@@ -21,15 +21,12 @@ def vision(url):
       # {"role": "system", "content": "You are a real estate photo expert. "},
       {"role": "user", "content": [
           {"type": "text", "text": """
-          Respond with 3 sections with bold headers.
-          1. Room Type: in as few words as possible, indicate the room type. I.e. Kitchen, Bathroom, Laundry Room, Finished Basement, etc.
-          2. Features increasing value: A bullet list noting a few of the positive attributes that would make this property desirable or valuable.
-          3. Features decreasing value: A bullet list noting a few of the negative attributes that could decrease this property's value.
+          Describe the elements of this property that would either increase or decrease its value.
+          Format your response with 2 sections, starting with the positive, and follow with potentially negative attributes.
           """},
           {"type": "image_url",
            "image_url": {"url": str(url)}
            }]
-      }
     ]
   )
   return botResponse.choices[0].message.content
@@ -43,7 +40,7 @@ def image_to_base64(image: Image) -> str:
 def is_kitchen(df):
     # Get price prediction from DataRobot
     deployment_id = '637c167648411c671967b805'
-    API_KEY = os.environ["DATAROBOT_API_KEY"]
+    API_KEY = os.environ["DATAROBOT_API_TOKEN"]
     DATAROBOT_KEY = os.environ["DATAROBOT_KEY"]
     API_URL = 'https://cfds-ccm-prod.orm.datarobot.com/predApi/v1.0/deployments/{deployment_id}/predictions'
     headers = {
@@ -88,7 +85,7 @@ def kitchenText(image):
 def kitchenQuality(df):
     # Get price prediction from DataRobot
     deployment_id = '637d9bdf60a074513567b64e'
-    API_KEY = os.environ["DATAROBOT_API_KEY"]
+    API_KEY = os.environ["DATAROBOT_API_TOKEN"]
     DATAROBOT_KEY = os.environ["DATAROBOT_KEY"]
     API_URL = 'https://cfds-ccm-prod.orm.datarobot.com/predApi/v1.0/deployments/{deployment_id}/predictions'
     headers = {
@@ -123,8 +120,8 @@ def kitchenDetectorPage():
     container0 = st.container()
     col1, col2, col3, col4, col5, col6 = container0.columns([1,1,1,1,1,1])
     with col1:
-        st.caption("https://ssl.cdn-redfin.com/photo/248/bigphoto/702/C8160702_16_0.jpg")
-        st.image("https://ssl.cdn-redfin.com/photo/248/bigphoto/702/C8160702_16_0.jpg", width=75)
+        st.caption("https://ssl.cdn-redfin.com/photo/248/bigphoto/992/X8207992_10_1.jpg")
+        st.image("https://ssl.cdn-redfin.com/photo/248/bigphoto/992/X8207992_10_1.jpg", width=75)
     with col2:
         st.caption("https://ssl.cdn-redfin.com/photo/248/bigphoto/082/C8161082_0.jpg")
         st.image("https://ssl.cdn-redfin.com/photo/248/bigphoto/082/C8161082_0.jpg", width=150)
