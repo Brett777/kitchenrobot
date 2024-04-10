@@ -121,7 +121,7 @@ def kitchenDetectorPage():
     col1, col2, col3, col4, col5, col6 = container0.columns([1,1,1,1,1,1])
     with col1:
         st.caption("https://ssl.cdn-redfin.com/photo/248/bigphoto/992/X8207992_10_1.jpg")
-        st.image("https://ssl.cdn-redfin.com/photo/248/bigphoto/992/X8207992_10_1.jpg", width=75)
+        st.image("https://ssl.cdn-redfin.com/photo/248/bigphoto/992/X8207992_10_1.jpg", width=150)
     with col2:
         st.caption("https://ssl.cdn-redfin.com/photo/248/bigphoto/082/C8161082_0.jpg")
         st.image("https://ssl.cdn-redfin.com/photo/248/bigphoto/082/C8161082_0.jpg", width=150)
