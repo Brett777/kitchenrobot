@@ -26,7 +26,7 @@ def vision(url):
           """},
           {"type": "image_url",
            "image_url": {"url": str(url)}
-           }]
+           }]}
     ]
   )
   return botResponse.choices[0].message.content
