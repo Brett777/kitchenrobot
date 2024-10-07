@@ -16,13 +16,13 @@ client = OpenAI()
 
 def vision(url):
   botResponse = client.chat.completions.create(
-    model="gpt-4-vision-preview",
+    model="gpt-4o-mini",
     messages=[
       # {"role": "system", "content": "You are a real estate photo expert. "},
       {"role": "user", "content": [
           {"type": "text", "text": """
           Describe the elements of this property that would either increase or decrease its value.
-          Format your response with 2 sections, starting with the positive, and follow with potentially negative attributes.
+          Format your response with 2 sections, starting with the positive, and follow with potentially negative attributes. Each section should be markdown heading 3.
           """},
           {"type": "image_url",
            "image_url": {"url": str(url)}
