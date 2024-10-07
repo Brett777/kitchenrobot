@@ -167,7 +167,7 @@ def kitchenDetectorPage():
         # with Image.open(requests.get(imageURL, stream=True).raw) as image:
         with st.spinner(text="Processing image attributes..."):
             text = vision(imageURL)
-        st.subheader(text)
+        st.markdown(text)
 
 
 def kitchenCameraPage():
